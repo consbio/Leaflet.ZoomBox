@@ -1,5 +1,3 @@
-//Ideas derived from implemnentation at: https://github.com/ScanEx/gmxControls/blob/master/examples/L.Control.boxZoom.html
-
 L.Control.ZoomBox = L.Control.extend({
     _active: false,
     _map: null,
