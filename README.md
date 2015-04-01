@@ -7,6 +7,20 @@ It allows you to draw an area on the map to zoom into.  See the [example](//cons
 *Tested with Leaflet 0.7.x*
 
 
+## Install
+
+From Bower:
+
+```
+bower install Leaflet.ZoomBox
+```
+
+
+From NPM:
+
+```
+npm install leaflet-zoombox
+```
 
 
 ## Usage
