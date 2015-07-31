@@ -62,3 +62,7 @@ map.addControl(control);
 Developed with support from the [South Atlantic Landscape Conservation Cooperative](http://www.southatlanticlcc.org/)
 
 Binding to the map's zoom box (shift-click) was inspired by [ScanEx](https://github.com/ScanEx/gmxControls/blob/master/examples/L.Control.boxZoom.html)
+
+
+## See Also:
+[L.Control.BoxZoom](https://github.com/gregallensworth/L.Control.BoxZoom): an alternative implementation
