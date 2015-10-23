@@ -4,7 +4,7 @@ L.Control.ZoomBox = L.Control.extend({
     includes: L.Mixin.Events,
     options: {
         position: 'topleft',
-        className: 'fa fa-search-plus',
+        className: 'fa fa-crop',
         modal: false
     },
     onAdd: function (map) {
