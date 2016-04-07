@@ -5,12 +5,13 @@ L.Control.ZoomBox = L.Control.extend({
     options: {
         position: 'topleft',
         className: 'fa fa-crop',
-        modal: false
+        modal: false,
+        title: "Zoom to specific area"
     },
     onAdd: function (map) {
         this._map = map;
         this._container = L.DomUtil.create('div', 'leaflet-zoom-box-control leaflet-bar');
-        this._container.title = "Zoom to specific area";
+        this._container.title = this.options.title;
         var link = L.DomUtil.create('a', this.options.className, this._container);
         link.href = "#";
 
