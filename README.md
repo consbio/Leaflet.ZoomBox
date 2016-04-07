@@ -53,6 +53,7 @@ var control = L.control.zoomBox({
                   // If true, zoomBox control stays active until you click on the control to deactivate.
     // position: "topleft",                  
     // className: "customClass"  // Class to use to provide icon instead of Font Awesome
+    // title: "My custom title" // a custom title
 });
 map.addControl(control);
 ```
