@@ -41,6 +41,7 @@ L.Control.ZoomBox = L.Control.extend({
         L.DomEvent
             .on(this._container, 'dblclick', L.DomEvent.stop)
             .on(this._container, 'click', L.DomEvent.stop)
+            .on(this._container, 'mousedown', L.DomEvent.stopPropagation)
             .on(this._container, 'click', function(){
                 this._active = !this._active;
                 if (this._active && map.getZoom() != map.getMaxZoom()){
