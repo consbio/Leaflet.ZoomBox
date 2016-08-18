@@ -4,7 +4,7 @@ A zoom box control for Leaflet.
 
 It allows you to draw an area on the map to zoom into.  See the [example](http://consbio.github.io/Leaflet.ZoomBox).
 
-*Tested with Leaflet 0.7.x*
+*Tested with Leaflet 1.0.*
 
 
 ## Install
