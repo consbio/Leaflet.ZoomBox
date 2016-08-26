@@ -31,7 +31,7 @@ Include the CSS:
 <link rel="stylesheet" href="L.Control.ZoomBox.css" />
 ```
 
-This control uses [Font Awesome](http://fortawesome.github.io/Font-Awesome/) for the icon by default.  To use, include:
+This control uses [Font Awesome](http://fontawesome.io/) for the icon by default.  To use, include:
 
 ```
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
@@ -60,7 +60,7 @@ map.addControl(control);
 
 
 ## Credits:
-Developed with support from the [South Atlantic Landscape Conservation Cooperative](http://www.southatlanticlcc.org/)
+Developed with support from the [South Atlantic Landscape Conservation Cooperative](http://www.southatlanticlcc.org/), and maintained with support from [Peninsular Florida LCC](http://peninsularfloridalcc.org/) and the [U.S. Forest Service Northwest Regional Climate Hub](http://www.fs.fed.us/climatechange/nrch/)
 
 Binding to the map's zoom box (shift-click) was inspired by [ScanEx](https://github.com/ScanEx/gmxControls/blob/master/examples/L.Control.boxZoom.html)
 
