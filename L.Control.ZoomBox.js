@@ -41,6 +41,7 @@ L.Control.ZoomBox = L.Control.extend({
         L.DomEvent
             .on(this._container, 'dblclick', L.DomEvent.stop)
             .on(this._container, 'click', L.DomEvent.stop)
+            .on(this._container, 'mousedown', L.DomEvent.stopPropagation)
             .on(this._container, 'click', function(){
                 this._active = !this._active;
                 if (this._active && map.getZoom() != map.getMaxZoom()){
@@ -64,7 +65,6 @@ L.Control.ZoomBox = L.Control.extend({
         this._map.boxZoom.removeHooks();
         L.DomUtil.removeClass(this._map.getContainer(), 'leaflet-zoom-box-crosshair');
         this._active = false;
-        this._map.boxZoom._moved = false; //to get past issue w/ Leaflet locking clicks when moved is true (https://github.com/Leaflet/Leaflet/issues/3026).
     }
 });
 
