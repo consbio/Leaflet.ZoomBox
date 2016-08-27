@@ -65,5 +65,12 @@ Developed with support from the [South Atlantic Landscape Conservation Cooperati
 Binding to the map's zoom box (shift-click) was inspired by [ScanEx](https://github.com/ScanEx/gmxControls/blob/master/examples/L.Control.boxZoom.html)
 
 
+## Contributors:
+* [Brendan Ward](https://github.com/brendan-ward)
+* [Nik Stevenson-Molnar](https://github.com/nikmolnar)
+* [Kaveh Karimi-Asli](https://github.com/ka7eh)
+* [Andreas Adelsberger](https://github.com/punknroll)
+
+
 ## See Also:
 [L.Control.BoxZoom](https://github.com/gregallensworth/L.Control.BoxZoom): an alternative implementation
