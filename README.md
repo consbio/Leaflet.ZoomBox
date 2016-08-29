@@ -31,18 +31,16 @@ Include the CSS:
 <link rel="stylesheet" href="L.Control.ZoomBox.css" />
 ```
 
-This control uses [Font Awesome](http://fontawesome.io/) for the icon by default.  To use, include:
-
-```
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
-```
-
 
 Include the JavaScript:
 
 ```
 <script src="L.Control.ZoomBox.min.js"></script>
 ```
+
+
+This control uses [Google Material Icons](https://design.google.com/icons) by default.
+
 
 
 Example usage:

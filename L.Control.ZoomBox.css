@@ -3,8 +3,13 @@
  }
 .leaflet-zoom-box-control.active a {
     color: #FFF;
-    background: #666;
+    background-color: #CCC;
+    background-image: url(ic_center_focus_strong_black_24px.svg);
 }
 .leaflet-zoom-box-crosshair {
     cursor: crosshair !important;
+}
+.leaflet-zoom-box-icon {
+    background: url(ic_crop_free_black_24px.svg) no-repeat center center;
+    background-size: 24px 24px;
 }

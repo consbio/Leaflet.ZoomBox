@@ -4,7 +4,7 @@ L.Control.ZoomBox = L.Control.extend({
     includes: L.Mixin.Events,
     options: {
         position: 'topleft',
-        className: 'fa fa-crop',
+        className: 'leaflet-zoom-box-icon',
         modal: false,
         title: "Zoom to specific area"
     },
