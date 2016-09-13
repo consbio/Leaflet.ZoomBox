@@ -1,6 +1,6 @@
 {
 	"name": "leaflet-zoombox",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"description": "ZoomBox Control for Leaflet",
   	"homepage": "http://github.com/consbio/Leaflet.ZoomBox",
   	"author": {
