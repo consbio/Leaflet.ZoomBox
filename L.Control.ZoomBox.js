@@ -18,6 +18,7 @@ L.Control.ZoomBox = L.Control.extend({
         // Bind to the map's boxZoom handler
         var _origMouseDown = map.boxZoom._onMouseDown;
         map.boxZoom._onMouseDown = function(e){
+            if (e.button === 2) return;  // prevent right-click from triggering zoom box
             _origMouseDown.call(map.boxZoom, {
                 clientX: e.clientX,
                 clientY: e.clientY,
