@@ -2,6 +2,7 @@
 	"name": "leaflet-zoombox",
 	"version": "0.3.2",
 	"description": "ZoomBox Control for Leaflet",
+	"main": "L.Control.ZoomBox.js",
   	"homepage": "http://github.com/consbio/Leaflet.ZoomBox",
   	"author": {
 	  	"name": "Brendan Ward",
