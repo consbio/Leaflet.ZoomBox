@@ -1,7 +1,7 @@
 L.Control.ZoomBox = L.Control.extend({
     _active: false,
     _map: null,
-    includes: L.Mixin.Events,
+    includes: L.Evented ? L.Evented.prototype : L.Mixin.Events,
     options: {
         position: 'topleft',
         className: 'leaflet-zoom-box-icon',
