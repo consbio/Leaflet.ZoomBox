@@ -4,7 +4,7 @@ L.Control.ZoomBox = L.Control.extend({
     includes: L.Evented ? L.Evented.prototype : L.Mixin.Events,
     options: {
         position: 'topleft',
-        forceSeparateButton: true,
+        addToZoomControl: false,
         content: "",
         className: "leaflet-zoom-box-icon",
         modal: false,
@@ -12,7 +12,7 @@ L.Control.ZoomBox = L.Control.extend({
     },
     onAdd: function (map) {
         this._map = map;
-        this._separate_container = !map.zoomControl || this.options.forceSeparateButton;
+        this._separate_container = !map.zoomControl || !this.options.addToZoomControl;
         if (!this._separate_container) {
 			this._container = map.zoomControl._container;
 		} else {
