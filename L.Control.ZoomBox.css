@@ -1,7 +1,7 @@
 .leaflet-zoom-box-control {
     font-size: 18px;
  }
-.leaflet-zoom-box-control.active a {
+.leaflet-zoom-box-control.active a, .leaflet-zoom-box-icon.active {
     color: #FFF;
     background-color: #CCC;
     /*src: https://design.google.com/icons/#ic_center_focus_strong*/
