@@ -72,6 +72,7 @@ Binding to the map's zoom box (shift-click) was inspired by [ScanEx](https://git
 * [Nik Stevenson-Molnar](https://github.com/nikmolnar)
 * [Kaveh Karimi-Asli](https://github.com/ka7eh)
 * [Andreas Adelsberger](https://github.com/punknroll)
+* [Isaac Nygaard](https://github.com/azmisov)
 
 
 ## See Also:
