@@ -12,19 +12,19 @@ L.Control.ZoomBox = L.Control.extend({
     },
     onAdd: function (map) {
         this._map = map;
-        this._separate_container = !map.zoomControl || !this.options.addToZoomControl;
-        if (!this._separate_container) {
-			this._container = map.zoomControl._container;
-		} else {
-			this._container = L.DomUtil.create('div', 'leaflet-zoom-box-control leaflet-bar');
-			this._container.title = this.options.title;
-		}
-        var link = this._link = L.DomUtil.create('a', this.options.className, this._container);
-        if (!this._separate_container){
-			link.title = this.options.title;
-		}
-        link.innerHTML = this.options.content || "";
-        link.href = "#";
+        var separate_container = !map.zoomControl || !this.options.addToZoomControl;
+        if (!separate_container) {
+            this._container = map.zoomControl._container;
+        } else {
+            this._container = L.DomUtil.create('div', 'leaflet-zoom-box-control leaflet-bar');
+            this._container.title = this.options.title;
+        }
+        this._link = L.DomUtil.create('a', this.options.className, this._container);
+        if (!separate_container){
+            this._link.title = this.options.title;
+        }
+        this._link.innerHTML = this.options.content || "";
+        this._link.href = "#";
 
         // Bind to the map's boxZoom handler
         var _origMouseDown = map.boxZoom._onMouseDown;
@@ -40,22 +40,21 @@ L.Control.ZoomBox = L.Control.extend({
 
         map.on('zoomend', function(){
             if (map.getZoom() == map.getMaxZoom()){
-                L.DomUtil.addClass(link, 'leaflet-disabled');
+                L.DomUtil.addClass(this._link, 'leaflet-disabled');
             }
             else {
-                L.DomUtil.removeClass(link, 'leaflet-disabled');
+                L.DomUtil.removeClass(this._link, 'leaflet-disabled');
             }
         }, this);
         if (!this.options.modal) {
             map.on('boxzoomend', this.deactivate, this);
         }
 
-        this._evt_handler = this._separate_container ? this._container : this._link;
         L.DomEvent
-            .on(this._evt_handler, 'dblclick', L.DomEvent.stop)
-            .on(this._evt_handler, 'click', L.DomEvent.stop)
-            .on(this._evt_handler, 'mousedown', L.DomEvent.stopPropagation)
-            .on(this._evt_handler, 'click', function(){
+            .on(this._link, 'dblclick', L.DomEvent.stop)
+            .on(this._link, 'click', L.DomEvent.stop)
+            .on(this._link, 'mousedown', L.DomEvent.stopPropagation)
+            .on(this._link, 'click', function(){
                 this._active = !this._active;
                 if (this._active && map.getZoom() != map.getMaxZoom()){
                     this.activate();
@@ -67,13 +66,13 @@ L.Control.ZoomBox = L.Control.extend({
         return this._container;
     },
     activate: function() {
-        L.DomUtil.addClass(this._evt_handler, 'active');
+        L.DomUtil.addClass(this._link, 'active');
         this._map.dragging.disable();
         this._map.boxZoom.addHooks();
         L.DomUtil.addClass(this._map.getContainer(), 'leaflet-zoom-box-crosshair');
     },
     deactivate: function() {
-        L.DomUtil.removeClass(this._evt_handler, 'active');
+        L.DomUtil.removeClass(this._link, 'active');
         this._map.dragging.enable();
         this._map.boxZoom.removeHooks();
         L.DomUtil.removeClass(this._map.getContainer(), 'leaflet-zoom-box-crosshair');
