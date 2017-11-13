@@ -57,7 +57,7 @@ Options:
 - *modal*: (boolean, default = `false`); if false, it deactivates after each use; if true, zoomBox control stays active until you click on the control again to deactivate options (like a toggle button)
 - *position*: (string, default = `"topleft"`); position of the control
 - *title*: (string, default = `"Zoom to specific area"`) title attribute for the control
-- *className*: (string, default = `"leaflet-zoom-box-icon"`) className of the control link, which you can use to override the default styling; you can also override the control container style by creating a new CSS rule for `.leaflet-zoom-box-control`
+- *className*: (string, default = `"leaflet-zoom-box-icon"`) className of the control link, which you can use to override the default styling; the `active` class will also be toggled for this element, when the control is activated; you can also override the control container style by creating a new CSS rule for `.leaflet-zoom-box-control`
 - *content*: (string, default = `""`) html content to set as `innerHTML` of the control link; used in conjunction with the *className* option, you can use svg or html code to customize the control (see **[examples/customContent.html](http://consbio.github.io/Leaflet.ZoomBox/examples/customContent.html)**)
 - *addToZoomControl*: (bool, default = `false`) if true, it will attempt to add the control to the map's existing zoomControl container; if false, the control link will be placed in a its own container
 
