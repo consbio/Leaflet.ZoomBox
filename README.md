@@ -9,13 +9,6 @@ It allows you to draw an area on the map to zoom into.  See the [example](http:/
 
 ## Install
 
-From Bower:
-
-```
-bower install Leaflet.ZoomBox
-```
-
-
 From NPM:
 
 ```
