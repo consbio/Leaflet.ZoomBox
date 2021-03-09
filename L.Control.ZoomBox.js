@@ -23,6 +23,7 @@ L.Control.ZoomBox = L.Control.extend({
         this._link.innerHTML = this.options.content || "";
         this._link.href = "#";
         this._link.setAttribute('role', 'button');
+        this._link.setAttribute('aria-pressed', 'false');
 
         // Bind to the map's boxZoom handler
         var _origMouseDown = map.boxZoom._onMouseDown;
@@ -68,6 +69,7 @@ L.Control.ZoomBox = L.Control.extend({
         this._map.dragging.disable();
         this._map.boxZoom.addHooks();
         L.DomUtil.addClass(this._map.getContainer(), 'leaflet-zoom-box-crosshair');
+        this._link.setAttribute('aria-pressed', 'true');
     },
     deactivate: function() {
         L.DomUtil.removeClass(this._link, 'active');
@@ -75,6 +77,7 @@ L.Control.ZoomBox = L.Control.extend({
         this._map.boxZoom.removeHooks();
         L.DomUtil.removeClass(this._map.getContainer(), 'leaflet-zoom-box-crosshair');
         this._active = false;
+        this._link.setAttribute('aria-pressed', 'false');
     }
 });
 
