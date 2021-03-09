@@ -40,9 +40,11 @@ L.Control.ZoomBox = L.Control.extend({
         map.on('zoomend', function(){
             if (map.getZoom() == map.getMaxZoom()){
                 L.DomUtil.addClass(this._link, 'leaflet-disabled');
+                this._link.setAttribute('aria-disabled', 'true');
             }
             else {
                 L.DomUtil.removeClass(this._link, 'leaflet-disabled');
+                this._link.removeAttribute('aria-disabled');
             }
         }, this);
         if (!this.options.modal) {
