@@ -22,6 +22,7 @@ L.Control.ZoomBox = L.Control.extend({
         this._link.title = this.options.title;
         this._link.innerHTML = this.options.content || "";
         this._link.href = "#";
+        this._link.setAttribute('role', 'button');
 
         // Bind to the map's boxZoom handler
         var _origMouseDown = map.boxZoom._onMouseDown;
