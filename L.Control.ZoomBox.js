@@ -17,12 +17,9 @@ L.Control.ZoomBox = L.Control.extend({
             this._container = map.zoomControl._container;
         } else {
             this._container = L.DomUtil.create('div', 'leaflet-zoom-box-control leaflet-bar');
-            this._container.title = this.options.title;
         }
         this._link = L.DomUtil.create('a', this.options.className, this._container);
-        if (!separate_container){
-            this._link.title = this.options.title;
-        }
+        this._link.title = this.options.title;
         this._link.innerHTML = this.options.content || "";
         this._link.href = "#";
 
